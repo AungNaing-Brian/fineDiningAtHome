@@ -281,22 +281,30 @@
     <script src="script.js"></script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const videoCards = document.querySelectorAll(".video-card");
+     document.addEventListener("DOMContentLoaded", () => {
+  const videoCards = document.querySelectorAll(".video-card");
 
-        videoCards.forEach((card) => {
-          const video = card.querySelector("video");
+  const isMobile = window.innerWidth <= 768;
 
-          card.addEventListener("mouseenter", () => {
-            video.play().catch((err) => console.log(err));
-          });
+  videoCards.forEach((card) => {
+    const video = card.querySelector("video");
 
-          card.addEventListener("mouseleave", () => {
-            video.pause();
-            video.currentTime = 0;
-          });
-        });
+    if (isMobile) {
+      // 📱 MOBILE → autoplay always
+      video.play().catch(() => {});
+    } else {
+      // 🖥️ DESKTOP → hover play
+      card.addEventListener("mouseenter", () => {
+        video.play().catch(() => {});
       });
+
+      card.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    }
+  });
+});
     </script>
   </body>
 </html>
