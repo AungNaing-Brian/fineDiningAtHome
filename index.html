@@ -319,7 +319,7 @@
         Your perfect menu is a conversation. Discuss your vision directly
         with our chef.
       </p>
-      <a href="#" class="btn-gold">SCHEDULE CONSULTATION</a>
+      <a href="https://wa.me/971586450801?text=Hello%20Chef,%20I%20want%20to%20book." class="btn-gold">SCHEDULE CONSULTATION</a>
     </div>
 
   </div>
@@ -398,34 +398,34 @@
 
     <!-- RIGHT FORM -->
     <div class="inquiry-form">
-      <form>
+      <form id="contact-form" onsubmit="sendMail(event)">
         <div class="form-row">
           <div class="form-group">
             <label>FULL NAME</label>
-            <input type="text" placeholder="Enter name">
+            <input id="name" type="text" placeholder="Enter name" required>
           </div>
 
           <div class="form-group">
             <label>EMAIL ADDRESS</label>
-            <input type="email" placeholder="Enter email">
+            <input id="email" type="email" placeholder="Enter email" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label>GUEST COUNT</label>
-            <input type="number" placeholder="e.g. 8">
+            <input id="guests" type="number" placeholder="e.g. 8" required>
           </div>
 
           <div class="form-group">
             <label>PREFERRED DATE</label>
-            <input type="date">
+            <input id="date" type="date" required>
           </div>
         </div>
 
         <div class="form-group">
           <label>SPECIAL OCCASION / NOTES</label>
-          <textarea placeholder="How can we make this exceptional?"></textarea>
+          <textarea id="message" placeholder="How can we make this exceptional?" required></textarea>
         </div>
 
         <button type="submit" class="btn-gold">SEND INQUIRY</button>
@@ -436,14 +436,14 @@
 
   <!-- FOOTER -->
   <div class="footer-luxury">
-    <p class="brand">Fine Dining At Home DXB</p>
+    <p class="brand">SAVORYA DXB</p>
 
-    <div class="links">
+    <!-- <div class="links">
       <span>PRIVACY POLICY</span>
       <span>TERMS OF SERVICE</span>
-    </div>
+    </div> -->
 
-    <p class="copy">© 2025 FINE DINING AT HOME DXB. ALL RIGHTS RESERVED.</p>
+    <p class="copy">© 2026 SAVORYA DXB. ALL RIGHTS RESERVED.</p>
   </div>
 </section>
     <!--========== FOOTER ==========-->
@@ -453,7 +453,7 @@
     <!--========== SCROLLREVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!--========== MAIN JS ==========-->
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 
     <script>
@@ -481,6 +481,16 @@
     }
   });
 });
+    </script>
+
+     <!-- ========== MAILSCRIPT ========== -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "iKUtc1a-t-bGHfKex",
+            });
+        })();
     </script>
   </body>
 </html>

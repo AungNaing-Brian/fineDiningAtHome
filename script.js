@@ -59,3 +59,29 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+/* ========== MAIL FUNCTION ========== */
+
+function sendMail(event) {
+  event.preventDefault(); 
+
+  let parms = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    guests: document.getElementById("guests").value,
+    date: document.getElementById("date").value,
+    message: document.getElementById("message").value,
+    title: "New Booking Request",
+
+  };
+
+  emailjs.send("service_mmpowlf", "template_qa2p4vj", parms).then(() => {
+    Swal.fire({
+      title: "Message Sent!",
+      text: "Thank you for contacting me 😊",
+      icon: "success",
+    });
+
+    document.getElementById("contact-form").reset();
+  });
+}
