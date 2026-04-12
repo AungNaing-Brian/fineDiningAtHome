@@ -20,11 +20,11 @@
   </head>
   <body>
     <!--========== HEADER ==========-->
-    <header class="header">
+    <!-- <header class="header">
       <div class="container nav">
-        <a href="#" class="nav__logo"> SAVORYA DXB </a>
+        <a href="#" class="nav__logo"> SAVORYA DXB </a> -->
         <!-- <button class="button">BOOK NOW</button> -->
-         <a 
+         <!-- <a 
   href="https://wa.me/971586450801?text=Hello%20Chef%20Biki,%20I%20would%20like%20to%20book%20a%20private%20dining%20experience."
   target="_blank"
   class="button"
@@ -32,11 +32,36 @@
   BOOK NOW
 </a>
       </div>
-    </header>
+    </header> -->
+    <header class="header">
+  <div class="nav container">
+
+    <!-- LOGO -->
+    <a href="#" class="nav__logo">SAVORYA DXB</a>
+
+    <!-- MENU -->
+    <ul class="nav__menu">
+      <li><a href="#home" class="nav__link active">HOME</a></li>
+      <li><a href="#about" class="nav__link">ABOUT</a></li>
+      <li><a href="#menu" class="nav__link">MENU</a></li>
+      <li><a href="#contact" class="nav__link">CONTACT</a></li>
+    </ul>
+
+    <!-- BUTTON -->
+    <a 
+      href="https://wa.me/971586450801?text=Hello%20Chef,%20I%20want%20to%20book."
+      target="_blank"
+      class="nav__btn"
+    >
+      BOOK NOW
+    </a>
+
+  </div>
+</header>
     <!--========== MAIN ==========-->
     <main class="main">
       <!--========== HERO ==========-->
-      <section class="hero section">
+      <section class="hero section" id="home">
         <div class="hero__content container">
           <div class="overlay"></div>
           <div class="hero__data">
@@ -105,7 +130,7 @@
         </div>
       </section>
       <!--========== ABOUT ==========-->
-      <section class="bespoke">
+      <section class="bespoke" id="about">
         <div class="container">
           <p class="subtitle">CURATION</p>
           <h2 class="title">Bespoke Offerings</h2>
@@ -201,7 +226,7 @@
       </section> -->
 
 
-      <section class="menu-luxury">
+      <section class="menu-luxury" id="menu">
   <div class="container">
 
     <!-- HEADER -->
@@ -225,20 +250,20 @@
       </div>
 
       <div class="menu-item">
-        <img src="images/dynamiteShrimp.jpeg" alt="">
-        <div class="content">
-          <span>COURSE 03 – HOT APPETIZER</span>
-          <h3>Dynamite Shrimp</h3>
-          <p>Crispy tempura shrimp, spicy mayo, toasted sesame.</p>
-        </div>
-      </div>
-
-      <div class="menu-item">
         <img src="images/burrata&HeirloonTomato.jpeg" alt="">
         <div class="content">
           <span>COURSE 02 – STARTER</span>
           <h3>Burrata & Heirloom Tomato</h3>
           <p>Creamy burrata, sun-ripened tomatoes, basil oil.</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/dynamiteShrimp.jpeg" alt="">
+        <div class="content">
+          <span>COURSE 03 – HOT APPETIZER</span>
+          <h3>Dynamite Shrimp</h3>
+          <p>Crispy tempura shrimp, spicy mayo, toasted sesame.</p>
         </div>
       </div>
 
@@ -256,20 +281,20 @@
     <!-- MAIN SELECTION -->
     <div class="main-selection">
       <h2>The Main Selection</h2>
-
+      <p class="sub">(COURSE 05 / Choose - 1)</p>
       <div class="main-grid">
         <div class="main-card">
           <img src="images/grilledChickenWithSaffronCreamSauce.jpeg" alt="">
           <h3>Grilled Chicken with Saffron Cream</h3>
           <p>Tender chicken breast, saffron sauce, mashed potato.</p>
-          <span class="included">INCLUDED</span>
+          
         </div>
 
         <div class="main-card">
           <img src="images/beefStriploin.jpeg" alt="">
           <h3>Premium Beef Striploin</h3>
           <p>Seared striploin, butter potato puree, roasted carrot.</p>
-          <span class="upgrade">+40 AED Upgrade</span>
+          
         </div>
       </div>
     </div>
@@ -332,58 +357,95 @@
         </div>
       </section>
       <!--========== CONTACT & INQUIRY  ==========-->
-      <section class="inquiry-section">
-  <div class="container">
-    
-    <!-- LEFT SIDE -->
-    <div class="left">
-      <p class="tag">INQUIRY</p>
+      <section class="inquiry-luxury" id="contact">
+  <div class="container inquiry-grid">
+
+    <!-- LEFT CONTENT -->
+    <div class="inquiry-left">
+      <span class="tag">INQUIRY</span>
       <h1>Begin Your <br> Journey</h1>
+
       <p class="desc">
-        Whether you are planning an intimate dinner or seeking 
-        professional culinary consultancy, our team will ensure 
-        every detail is curated to perfection.
+        Whether you are planning an intimate dinner or seeking professional culinary consultancy, our team will ensure every detail is curated to perfection.
       </p>
 
-      <div class="contact">
-        <p>📍 Office of the Chef<br>Dubai, UAE</p>
-        <p>📞 +971 58 645 0801</p>
-        <p>✉️ biki.joshi24@gmail.com</p>
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="ri-map-pin-line"></i>
+          <div>
+            <span>OFFICE OF THE CHEF</span>
+            <p>Dubai, UAE</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="ri-phone-line"></i>
+          <div>
+            <span>DIRECT LINE</span>
+            <p>+971 58 645 0801</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="ri-mail-line"></i>
+          <div>
+            <span>EMAIL</span>
+            <p>biki.joshi24@gmail.com</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- RIGHT SIDE FORM -->
-    <div class="right">
+    <!-- RIGHT FORM -->
+    <div class="inquiry-form">
       <form>
-        <div class="row">
-          <input type="text" placeholder="Enter name">
-          <input type="email" placeholder="Enter email">
+        <div class="form-row">
+          <div class="form-group">
+            <label>FULL NAME</label>
+            <input type="text" placeholder="Enter name">
+          </div>
+
+          <div class="form-group">
+            <label>EMAIL ADDRESS</label>
+            <input type="email" placeholder="Enter email">
+          </div>
         </div>
 
-        <div class="row">
-          <input type="number" placeholder="e.g. 8">
-          <input type="date">
+        <div class="form-row">
+          <div class="form-group">
+            <label>GUEST COUNT</label>
+            <input type="number" placeholder="e.g. 8">
+          </div>
+
+          <div class="form-group">
+            <label>PREFERRED DATE</label>
+            <input type="date">
+          </div>
         </div>
 
-        <textarea placeholder="How can we make this exceptional?"></textarea>
+        <div class="form-group">
+          <label>SPECIAL OCCASION / NOTES</label>
+          <textarea placeholder="How can we make this exceptional?"></textarea>
+        </div>
 
-        <button type="submit">SEND INQUIRY</button>
+        <button type="submit" class="btn-gold">SEND INQUIRY</button>
       </form>
     </div>
 
   </div>
 
   <!-- FOOTER -->
-  <div class="footer">
-    <p>Fine Dining At Home DXB</p>
+  <div class="footer-luxury">
+    <p class="brand">Fine Dining At Home DXB</p>
+
     <div class="links">
-      <span>Privacy Policy</span>
-      <span>Terms of Service</span>
+      <span>PRIVACY POLICY</span>
+      <span>TERMS OF SERVICE</span>
     </div>
-    <p>© 2025 Fine Dining At Home DXB. All rights reserved.</p>
+
+    <p class="copy">© 2025 FINE DINING AT HOME DXB. ALL RIGHTS RESERVED.</p>
   </div>
 </section>
-    </main>
     <!--========== FOOTER ==========-->
 
     <!--========== SCROLL UP ==========-->

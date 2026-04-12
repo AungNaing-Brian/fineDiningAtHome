@@ -1,7 +1,9 @@
-ScrollReveal().reveal('.hero-content', { delay: 200 });
+ScrollReveal().reveal('.hero__content', { delay: 200 });
 ScrollReveal().reveal('.card', { interval: 200 });
 ScrollReveal().reveal('.menu-item', { interval: 100 });
-ScrollReveal().reveal('.video', { interval: 200 });
+ScrollReveal().reveal('.video-card', { interval: 200 });
+ScrollReveal().reveal('.main-card', { interval: 200 });
+ScrollReveal().reveal('.dessert', { delay: 200 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const videoCards = document.querySelectorAll(".video-card");
@@ -30,3 +32,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav__link");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((section) => {
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - 120;
+    const sectionId = section.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+
+        const activeLink = document.querySelector(
+          `.nav__link[href*="${sectionId}"]`
+        );
+
+        if (activeLink) activeLink.classList.add("active");
+      });
+    }
+  });
+}
+
+window.addEventListener("scroll", scrollActive);
